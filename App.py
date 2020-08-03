@@ -11,9 +11,9 @@ db = SQLAlchemy(app)
 #Creating model table for our CRUD database
 class Data(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(100))
-    email = db.Column(db.String(100))
-    phone = db.Column(db.String(100))
+    name = db.Column(db.String(100),nullable=False)
+    email = db.Column(db.String(100),nullable=False)
+    phone = db.Column(db.String(100),nullable=False)
 
     def __init__(self, name, email, phone):
 
